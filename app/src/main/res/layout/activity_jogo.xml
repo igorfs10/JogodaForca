@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="_ _ _ _"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:id="@+id/txtPalavraJogo"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Categoria"
+        android:textAlignment="center"
+        android:id="@+id/txtCategoria"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Erros: 0"
+        android:id="@+id/txtErros"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acertos: 0"
+        android:id="@+id/txtAcertos"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="A"
+            android:id="@+id/btnA"
+            android:onClick="acaobotao"
+            android:tag="A"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="B"
+            android:id="@+id/btnB"
+            android:onClick="acaobotao"
+            android:tag="B"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="C"
+            android:id="@+id/btnC"
+            android:onClick="acaobotao"
+            android:tag="C"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="D"
+            android:id="@+id/btnD"
+            android:onClick="acaobotao"
+            android:tag="D"
+            />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="E"
+            android:id="@+id/btnE"
+            android:onClick="acaobotao"
+            android:tag="E"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="F"
+            android:id="@+id/btnF"
+            android:onClick="acaobotao"
+            android:tag="F"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="G"
+            android:id="@+id/btnG"
+            android:onClick="acaobotao"
+            android:tag="G"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="H"
+            android:id="@+id/btnH"
+            android:onClick="acaobotao"
+            android:tag="H"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="I"
+            android:id="@+id/btnI"
+            android:onClick="acaobotao"
+            android:tag="I"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="J"
+            android:id="@+id/btnJ"
+            android:onClick="acaobotao"
+            android:tag="J"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="K"
+            android:id="@+id/btnK"
+            android:onClick="acaobotao"
+            android:tag="K"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="L"
+            android:id="@+id/btnL"
+            android:onClick="acaobotao"
+            android:tag="L"
+            />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="P"
+            android:id="@+id/btnP"
+            android:onClick="acaobotao"
+            android:tag="P"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="M"
+            android:id="@+id/btnM"
+            android:onClick="acaobotao"
+            android:tag="M"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="N"
+            android:id="@+id/btnN"
+            android:onClick="acaobotao"
+            android:tag="N"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="O"
+            android:id="@+id/btnO"
+            android:onClick="acaobotao"
+            android:tag="O"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Q"
+            android:id="@+id/btnQ"
+            android:onClick="acaobotao"
+            android:tag="Q"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="R"
+            android:id="@+id/btnR"
+            android:onClick="acaobotao"
+            android:tag="R"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="S"
+            android:id="@+id/btnS"
+            android:onClick="acaobotao"
+            android:tag="S"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="T"
+            android:id="@+id/btnT"
+            android:onClick="acaobotao"
+            android:tag="T"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="U"
+            android:id="@+id/btnU"
+            android:onClick="acaobotao"
+            android:tag="U"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="V"
+            android:id="@+id/btnV"
+            android:onClick="acaobotao"
+            android:tag="V"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="W"
+            android:id="@+id/btnW"
+            android:onClick="acaobotao"
+            android:tag="W"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="X"
+            android:id="@+id/btnX"
+            android:onClick="acaobotao"
+            android:tag="X"
+            />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Y"
+            android:id="@+id/btnY"
+            android:onClick="acaobotao"
+            android:tag="Y"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Z"
+            android:id="@+id/btnZ"
+            android:onClick="acaobotao"
+            android:tag="Z"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Reiniciar"
+            android:textSize="20dp"
+            android:onClick="reiniciar"
+            android:background="@color/ativado"
+            />
+
+    </LinearLayout>
+</LinearLayout>
