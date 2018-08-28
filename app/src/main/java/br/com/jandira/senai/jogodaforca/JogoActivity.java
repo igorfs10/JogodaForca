@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-import br.com.jandira.senai.jogodaforca.R;
-
 public class JogoActivity extends AppCompatActivity {
 
     TextView txtPalavraJogo;
@@ -23,7 +21,8 @@ public class JogoActivity extends AppCompatActivity {
             "ANIMAL",
             "CARRO",
             "TIME",
-            "PAÍS"
+            "PAÍS",
+            "FRUTA"
     };
     static final String[][] palavras = {{ //ANIMAIS
             "GATO",
@@ -33,7 +32,11 @@ public class JogoActivity extends AppCompatActivity {
             "ELEFANTE",
             "ESQUILO",
             "ZEBRA",
-            "POMBO"
+            "POMBO",
+            "HIPOPOTAMO",
+            "COBRA",
+            "LONTRA",
+            "MACACO"
         },{ //MARCAS DE CARROS
             "VOLKSWAGEN",
             "RENAULT",
@@ -42,7 +45,12 @@ public class JogoActivity extends AppCompatActivity {
             "HONDA",
             "FORD",
             "FIAT",
-            "PEUGEOT"
+            "PEUGEOT",
+            "MAZDA",
+            "FERRARI",
+            "PORSCHE",
+            "LAMBORGHINI",
+            "AUDI"
         },{ //TIMES
             "CORINTHIANS",
             "SANTOS",
@@ -50,7 +58,14 @@ public class JogoActivity extends AppCompatActivity {
             "FLAMENGO",
             "FLUMINENSE",
             "CHAPECOENSE",
-            "PORTUGUESA"
+            "PORTUGUESA",
+            "GREMIO",
+            "FORTALEZA",
+            "VASCO",
+            "BARCELONA",
+            "CHELSEA",
+            "LIVERPOOL",
+            "JUVENTUS"
         },{ //PAIS
             "BRASIL",
             "ITALIA",
@@ -58,7 +73,26 @@ public class JogoActivity extends AppCompatActivity {
             "TURQUIA",
             "INGLATERRA",
             "CHINA",
-            "AUSTRALIA"
+            "AUSTRALIA",
+            "IRAQUE",
+            "IRLANDA",
+            "ARGENTINA",
+            "SUECIA",
+            "COLOMBIA",
+            "NORUEGA"
+        },{ //FRUTAS
+            "BANANA",
+            "LARANJA",
+            "MARACUJA",
+            "UVA",
+            "KIWI",
+            "CARAMBOLA",
+            "CEREJA",
+            "MORANGO",
+            "PESSEGO",
+            "MANGA",
+            "JABUTICABA",
+            "AMEIXA"
         }
     };
 
@@ -70,7 +104,7 @@ public class JogoActivity extends AppCompatActivity {
     String palavraEscolhida = escolherPalavra(numeroCategoria);
 
     int acertosTotal = palavraEscolhida.length();
-    int errosTotal = palavraEscolhida.length() - 1;
+    int errosTotal = (int) Math.ceil(palavraEscolhida.length() / 1.5);
 
     int quantidaDeErros = 0;
     int quantidaDeAcertos = 0;
@@ -104,6 +138,8 @@ public class JogoActivity extends AppCompatActivity {
     public void acaobotao(View v) {
         char letraEscolhida = v.getTag().toString().charAt(0);
         v.setEnabled(false);
+        v.setBackgroundColor(getResources().getColor(R.color.desativado));
+
         boolean erro = true;
 
         for(int i = 0; i <= palavraEscolhida.length() - 1; i++){
@@ -138,11 +174,11 @@ public class JogoActivity extends AppCompatActivity {
         alert.setCancelable(false);
 
         if(condicaoVitoria == VITORIA){
-            alert.setTitle("Você Ganhou");
-            alert.setMessage("Você acertou a palavra: " + palavraEscolhida + ".");
+            alert.setTitle("Você Ganhou \uD83D\uDE00");
+            alert.setMessage("Você acertou a palavra. Parabéns.");
         }else{
-            alert.setTitle("Você Perdeu");
-            alert.setMessage("Você errou a palavra: " + palavraEscolhida + ".");
+            alert.setTitle("Você Perdeu \uD83D\uDE22");
+            alert.setMessage("Você errou a palavra. A palavra é '" + palavraEscolhida + "'.");
         }
         alert.setNegativeButton("sair", new DialogInterface.OnClickListener() {
             @Override

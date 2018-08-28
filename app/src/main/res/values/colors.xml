@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#111111</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="desativado">#e53935</color>
-    <color name="ativado">#42a5f5</color>
-    <color name="branco">#ffffff</color>
+    <color name="desativado">#8e0000</color>
+    <color name="ativado">#003c8f</color>
+    <color name="branco">#dddddd</color>
+    <color name="cinza">#313131</color>
+    <color name="azul">#1565c0</color>
+    <color name="vermelho">#c62828</color>
 </resources>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/colorPrimary"
+    android:background="@color/cinza"
     >
 
     <TextView
@@ -14,13 +14,14 @@
         android:textSize="50dp"
         android:textAlignment="center"
         android:textColor="@color/branco"
+        android:layout_marginBottom="50dp"
         />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/hangman"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         />
 
     <Button
@@ -29,7 +30,8 @@
         android:text="Começar"
         android:textSize="20dp"
         android:onClick="iniciarJogo"
-        android:background="@color/desativado"
+        android:background="@color/vermelho"
+        android:textColor="@color/branco"
         />
 
 </LinearLayout>
