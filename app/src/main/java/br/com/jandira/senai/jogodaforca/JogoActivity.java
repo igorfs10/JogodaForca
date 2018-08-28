@@ -2,6 +2,7 @@ package br.com.jandira.senai.jogodaforca;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -218,5 +219,12 @@ public class JogoActivity extends AppCompatActivity {
         final int numeroPalavra = new Random().nextInt((max - min) + 1) + min;
 
         return palavras[numeroCategoria][numeroPalavra];
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
