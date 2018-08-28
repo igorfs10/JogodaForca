@@ -3,7 +3,8 @@
     <color name="colorPrimary">#212121</color>
     <color name="colorPrimaryDark">#111111</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="desativado">#8e0000</color>
+    <color name="desativadovermelho">#8e0000</color>
+    <color name="desativadoverde">#00600f</color>
     <color name="ativado">#003c8f</color>
     <color name="branco">#dddddd</color>
     <color name="cinza">#313131</color>

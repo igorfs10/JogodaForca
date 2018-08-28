@@ -138,7 +138,6 @@ public class JogoActivity extends AppCompatActivity {
     public void acaobotao(View v) {
         char letraEscolhida = v.getTag().toString().charAt(0);
         v.setEnabled(false);
-        v.setBackgroundColor(getResources().getColor(R.color.desativado));
 
         boolean erro = true;
 
@@ -153,9 +152,11 @@ public class JogoActivity extends AppCompatActivity {
             }
         }
         if(erro){
+            v.setBackgroundColor(getResources().getColor(R.color.desativadovermelho));
             quantidaDeErros += 1;
             atualizarQuantidaDeErros();
         }else{
+            v.setBackgroundColor(getResources().getColor(R.color.desativadoverde));
             atualizarQuantidaDeAcertos();
         }
         if(quantidaDeErros >= errosTotal){
