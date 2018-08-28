@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Jogo da Forca"
-        android:textSize="50dp"
+        android:textSize="40dp"
         android:textAlignment="center"
         android:textColor="@color/branco"
         android:layout_marginBottom="50dp"
@@ -27,7 +27,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Começar"
+        android:text="Jogar"
         android:textSize="20dp"
         android:onClick="iniciarJogo"
         android:background="@color/vermelho"

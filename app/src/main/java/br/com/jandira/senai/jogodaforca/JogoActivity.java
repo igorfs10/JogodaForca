@@ -104,7 +104,7 @@ public class JogoActivity extends AppCompatActivity {
     String palavraEscolhida = escolherPalavra(numeroCategoria);
 
     int acertosTotal = palavraEscolhida.length();
-    int errosTotal = (int) Math.ceil(palavraEscolhida.length() / 1.5);
+    int errosTotal = (int) Math.ceil(palavraEscolhida.length() / 1.7);
 
     int quantidaDeErros = 0;
     int quantidaDeAcertos = 0;

@@ -12,9 +12,11 @@
         android:layout_height="wrap_content"
         android:text="_ _ _ _"
         android:textAlignment="center"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textColor="@color/branco"
         android:id="@+id/txtPalavraJogo"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
         />
 
     <TextView
@@ -24,6 +26,7 @@
         android:textAlignment="center"
         android:textColor="@color/branco"
         android:id="@+id/txtCategoria"
+        android:layout_marginBottom="5dp"
         />
 
     <TextView
@@ -32,6 +35,7 @@
         android:text="Erros: 0"
         android:textColor="@color/branco"
         android:id="@+id/txtErros"
+        android:layout_marginBottom="5dp"
         />
 
     <TextView
@@ -51,8 +55,8 @@
         >
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="A"
             android:id="@+id/btnA"
             android:onClick="acaobotao"
@@ -64,8 +68,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="B"
             android:id="@+id/btnB"
             android:onClick="acaobotao"
@@ -77,8 +81,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="C"
             android:id="@+id/btnC"
             android:onClick="acaobotao"
@@ -90,8 +94,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="D"
             android:id="@+id/btnD"
             android:onClick="acaobotao"
@@ -103,8 +107,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="E"
             android:id="@+id/btnE"
             android:onClick="acaobotao"
@@ -123,8 +127,8 @@
         >
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="F"
             android:id="@+id/btnF"
             android:onClick="acaobotao"
@@ -136,8 +140,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="G"
             android:id="@+id/btnG"
             android:onClick="acaobotao"
@@ -149,8 +153,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="H"
             android:id="@+id/btnH"
             android:onClick="acaobotao"
@@ -162,8 +166,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="I"
             android:id="@+id/btnI"
             android:onClick="acaobotao"
@@ -175,8 +179,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="J"
             android:id="@+id/btnJ"
             android:onClick="acaobotao"
@@ -195,8 +199,8 @@
         >
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="K"
             android:id="@+id/btnK"
             android:onClick="acaobotao"
@@ -208,8 +212,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="L"
             android:id="@+id/btnL"
             android:onClick="acaobotao"
@@ -220,8 +224,8 @@
             android:textColor="@color/branco"
             />
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="P"
             android:id="@+id/btnP"
             android:onClick="acaobotao"
@@ -233,8 +237,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="M"
             android:id="@+id/btnM"
             android:onClick="acaobotao"
@@ -246,8 +250,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="N"
             android:id="@+id/btnN"
             android:onClick="acaobotao"
@@ -266,8 +270,8 @@
         >
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="O"
             android:id="@+id/btnO"
             android:onClick="acaobotao"
@@ -279,8 +283,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="Q"
             android:id="@+id/btnQ"
             android:onClick="acaobotao"
@@ -292,8 +296,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="R"
             android:id="@+id/btnR"
             android:onClick="acaobotao"
@@ -305,8 +309,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="S"
             android:id="@+id/btnS"
             android:onClick="acaobotao"
@@ -318,8 +322,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="T"
             android:id="@+id/btnT"
             android:onClick="acaobotao"
@@ -338,8 +342,8 @@
         >
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="U"
             android:id="@+id/btnU"
             android:onClick="acaobotao"
@@ -351,8 +355,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="V"
             android:id="@+id/btnV"
             android:onClick="acaobotao"
@@ -364,8 +368,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="W"
             android:id="@+id/btnW"
             android:onClick="acaobotao"
@@ -377,8 +381,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="X"
             android:id="@+id/btnX"
             android:onClick="acaobotao"
@@ -389,8 +393,8 @@
             android:textColor="@color/branco"
             />
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="Y"
             android:id="@+id/btnY"
             android:onClick="acaobotao"
@@ -402,8 +406,8 @@
             />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="Z"
             android:id="@+id/btnZ"
             android:onClick="acaobotao"
