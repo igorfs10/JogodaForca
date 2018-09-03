@@ -154,6 +154,8 @@ public class JogoActivity extends AppCompatActivity {
             ncMode = true;
         }
 
+        letraAnterior = letraEscolhida;
+
         boolean erro = true;
 
         for(int i = 0; i <= palavraEscolhida.length() - 1; i++){
@@ -170,7 +172,6 @@ public class JogoActivity extends AppCompatActivity {
             v.setBackgroundColor(getResources().getColor(R.color.desativadovermelho));
             quantidaDeErros += 1;
             atualizarQuantidaDeErros();
-            atualizarImagem();
             if(quantidaDeErros == 6){
                 txtErros.setTextColor(getResources().getColor(R.color.desativadovermelho));
             }
@@ -181,8 +182,7 @@ public class JogoActivity extends AppCompatActivity {
                 txtAcertos.setTextColor(getResources().getColor(R.color.desativadoverde));
             }
         }
-
-        letraAnterior = letraEscolhida;
+        atualizarImagem();
 
         if(quantidaDeErros > errosTotal){
             gameOver(DERROTA);
