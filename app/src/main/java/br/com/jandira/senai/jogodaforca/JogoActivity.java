@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -18,6 +19,11 @@ public class JogoActivity extends AppCompatActivity {
     TextView txtAcertos;
     TextView txtCategoria;
     String palavra = "";
+    MediaPlayer musica;
+    ImageView imgForca;
+    char letraEscolhida;
+    char letraAnterior;
+    boolean ncMode = false;
 
     static final  String categorias[] = {
             "ANIMAL",
@@ -106,7 +112,7 @@ public class JogoActivity extends AppCompatActivity {
     String palavraEscolhida = escolherPalavra(numeroCategoria);
 
     int acertosTotal = palavraEscolhida.length();
-    int errosTotal = (int) Math.ceil(palavraEscolhida.length() / 1.7);
+    int errosTotal = 6;
 
     int quantidaDeErros = 0;
     int quantidaDeAcertos = 0;
@@ -117,10 +123,13 @@ public class JogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jogo);
 
+        iniciarMusica();
+
         txtPalavraJogo = findViewById(R.id.txtPalavraJogo);
         txtErros = findViewById(R.id.txtErros);
         txtAcertos = findViewById(R.id.txtAcertos);
         txtCategoria = findViewById(R.id.txtCategoria);
+        imgForca = findViewById(R.id.imgForca);
 
         txtCategoria.setText(categoriaEscolhida);
 
@@ -137,9 +146,13 @@ public class JogoActivity extends AppCompatActivity {
         atualizarQuantidaDeErros();
     }
 
-    public void acaobotao(View v) {
-        char letraEscolhida = v.getTag().toString().charAt(0);
+    public void acaoBotao(View v) {
+        letraEscolhida = v.getTag().toString().charAt(0);
         v.setEnabled(false);
+
+        if(letraEscolhida == 'C' && letraAnterior == 'N'){
+            ncMode = true;
+        }
 
         boolean erro = true;
 
@@ -157,24 +170,33 @@ public class JogoActivity extends AppCompatActivity {
             v.setBackgroundColor(getResources().getColor(R.color.desativadovermelho));
             quantidaDeErros += 1;
             atualizarQuantidaDeErros();
+            atualizarImagem();
+            if(quantidaDeErros == 6){
+                txtErros.setTextColor(getResources().getColor(R.color.desativadovermelho));
+            }
         }else{
             v.setBackgroundColor(getResources().getColor(R.color.desativadoverde));
             atualizarQuantidaDeAcertos();
         }
-        if(quantidaDeErros >= errosTotal){
+
+        letraAnterior = letraEscolhida;
+
+        if(quantidaDeErros > errosTotal){
             gameOver(DERROTA);
-        }else if(quantidaDeAcertos >= acertosTotal){
+        }else if(quantidaDeAcertos > acertosTotal){
             gameOver(VITORIA);
         }
     }
 
     public void reiniciar(View v){
+        pararMusica();
         recreate();
     }
 
     private void gameOver(int condicaoVitoria){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setCancelable(false);
+        pararMusica();
 
         if(condicaoVitoria == VITORIA){
             alert.setTitle("Você Ganhou \uD83D\uDE00");
@@ -224,8 +246,63 @@ public class JogoActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        pararMusica();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void atualizarImagem(){
+        if(ncMode){
+            if(quantidaDeErros == 1){
+                imgForca.setImageResource(R.drawable.nc1);
+            }else if(quantidaDeErros == 2){
+                imgForca.setImageResource(R.drawable.nc2);
+            }else if(quantidaDeErros == 3){
+                imgForca.setImageResource(R.drawable.nc3);
+            }else if(quantidaDeErros == 4){
+                imgForca.setImageResource(R.drawable.nc4);
+            }else if(quantidaDeErros == 5){
+                imgForca.setImageResource(R.drawable.nc5);
+            }else{
+                imgForca.setImageResource(R.drawable.nctotal);
+            }
+        }else{
+            if(quantidaDeErros == 1){
+                imgForca.setImageResource(R.drawable.hm1);
+            }else if(quantidaDeErros == 2){
+                imgForca.setImageResource(R.drawable.hm2);
+            }else if(quantidaDeErros == 3){
+                imgForca.setImageResource(R.drawable.hm3);
+            }else if(quantidaDeErros == 4){
+                imgForca.setImageResource(R.drawable.hm4);
+            }else if(quantidaDeErros == 5){
+                imgForca.setImageResource(R.drawable.hm5);
+            }else{
+                imgForca.setImageResource(R.drawable.hmtotal);
+            }
+        }
+    }
+
+    public void iniciarMusica(){
+        musica = MediaPlayer.create(getApplicationContext(),R.raw.jogo);
+        musica.start();
+    }
+
+    public void pararMusica(){
+        musica.stop();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        pararMusica();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        musica.setLooping(true);
+        musica.start();
     }
 }
