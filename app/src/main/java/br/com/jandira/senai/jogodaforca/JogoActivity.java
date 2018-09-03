@@ -267,7 +267,7 @@ public class JogoActivity extends AppCompatActivity {
                 imgForca.setImageResource(R.drawable.nc4);
             }else if(quantidaDeErros == 5){
                 imgForca.setImageResource(R.drawable.nc5);
-            }else{
+            }else if(quantidaDeErros == 6){
                 imgForca.setImageResource(R.drawable.nctotal);
             }
         }else{
@@ -281,7 +281,7 @@ public class JogoActivity extends AppCompatActivity {
                 imgForca.setImageResource(R.drawable.hm4);
             }else if(quantidaDeErros == 5){
                 imgForca.setImageResource(R.drawable.hm5);
-            }else{
+            }else if(quantidaDeErros == 6){
                 imgForca.setImageResource(R.drawable.hmtotal);
             }
         }
