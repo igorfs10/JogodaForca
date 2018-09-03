@@ -183,7 +183,7 @@ public class JogoActivity extends AppCompatActivity {
 
         if(quantidaDeErros > errosTotal){
             gameOver(DERROTA);
-        }else if(quantidaDeAcertos > acertosTotal){
+        }else if(quantidaDeAcertos >= acertosTotal){
             gameOver(VITORIA);
         }
     }
