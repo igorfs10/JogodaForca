@@ -177,6 +177,9 @@ public class JogoActivity extends AppCompatActivity {
         }else{
             v.setBackgroundColor(getResources().getColor(R.color.desativadoverde));
             atualizarQuantidaDeAcertos();
+            if(quantidaDeAcertos == acertosTotal - 1){
+                txtAcertos.setTextColor(getResources().getColor(R.color.desativadoverde));
+            }
         }
 
         letraAnterior = letraEscolhida;
